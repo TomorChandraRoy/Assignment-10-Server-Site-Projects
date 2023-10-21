@@ -143,7 +143,7 @@ async function run() {
       const result = await cardCollcetion.findOne(filter)
       res.send(result)
     })
-    // delete method Complete
+    
     // my card
     app.delete('/cardproducts/:id', async(req,res)=>{
       const id =req.params.id;
