@@ -19,7 +19,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
+    
     // await client.connect();
 
     const technologyCollcetion = client.db("technologyDB").collection("technology");
@@ -49,7 +49,7 @@ async function run() {
       const result =await technologyCollcetion.insertOne(newBrand);
       res.send(result) 
   })
-
+// get method complete
     // update
     app.get('/brandproducts/:id',async(req,res)=>{
       const id =req.params.id;
@@ -57,6 +57,7 @@ async function run() {
       const result = await technologyCollcetion.findOne(query);
       res.send(result)
   })
+  // put method Complete
   // update data client to server
   app.put('/brandproducts/:id', async(req,res)=>{
     const id =req.params.id;
@@ -142,6 +143,7 @@ async function run() {
       const result = await cardCollcetion.findOne(filter)
       res.send(result)
     })
+    // delete method Complete
     // my card
     app.delete('/cardproducts/:id', async(req,res)=>{
       const id =req.params.id;
