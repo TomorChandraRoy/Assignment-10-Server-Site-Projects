@@ -49,7 +49,7 @@ async function run() {
       const result =await technologyCollcetion.insertOne(newBrand);
       res.send(result) 
   })
-// get method complete
+
     // update
     app.get('/brandproducts/:id',async(req,res)=>{
       const id =req.params.id;
@@ -57,7 +57,7 @@ async function run() {
       const result = await technologyCollcetion.findOne(query);
       res.send(result)
   })
-  // put method Complete
+  
   // update data client to server
   app.put('/brandproducts/:id', async(req,res)=>{
     const id =req.params.id;
